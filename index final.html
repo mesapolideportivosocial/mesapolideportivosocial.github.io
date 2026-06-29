@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polideportivos Sociales · Mi Poli</title>
+
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIlBvbGlkZXBvcnRpdm9zIFNvY2lhbGVzIiwgInNob3J0X25hbWUiOiAiTWlQb2xpIiwgInN0YXJ0X3VybCI6ICIuIiwgInNjb3BlIjogIi4iLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgImJhY2tncm91bmRfY29sb3IiOiAiI0ZGRkZGRiIsICJ0aGVtZV9jb2xvciI6ICIjMTY0NDdFIiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTUFBQUFEQUNBWUFBQUJTM0d3SEFBQU9Ra2xFUVZSNG5PM2RmV3hkNVdISDhlL3puSFB1bSszRVNSd1QydEFFMmpIQ3F3SXFwWVZBQmFpdHVvRzZDUVJGMnNiUU5LMnNiNXEyYm0wRmUwSHF5MFNsVGxNRnRKcXlqaGExV3JzaEdLUXRhc3Q0N1lDaWxvVUFhWGdMa0RmSDc3N1h2dmVlOHp6NzQxd2JPOWlPN2R3c0RzL3ZJMWtFKzE3ZlkvdjUzdk9jbDN1dTZiMzhabzlJb095eFhnQ1JZMGtCU05BVWdBUk5BVWpRRklBRVRRRkkwQlNBQkUwQlNOQVVnQVJOQVVqUUZJQUVUUUZJMEJTQUJFMEJTTkFVZ0FSTkFValFGSUFFVFFGSTBCU0FCRTBCU05BVWdBUk5BVWpRRklBRVRRRkkwQlNBQkUwQlNOQVVnQVJOQVVqUUZJQUVUUUZJMEJTQUJFMEJTTkFVZ0FSTkFValFGSUFFVFFGSTBCU0FCRTBCU05BVWdBUk5BVWpRRklBRVRRRkkwQlNBQkUwQlNOQVVnQVJOQVVqUUZJQUVUUUZJMEJTQUJFMEJTTkFVZ0FSTkFValFGSUFFTFQ3V0MzQ3NXR3VXZm1jUHp2djJMVXliSE5IUEJEaTMvSDZtb3kzSUFKejNWS3VOSmQ4L2ppeWxZc3h5YTJDczFzQXZjYUdNTVZSS1NadVhhUGtMS2dCakRQVkdrdzN2V00wMy92cjNGMzMvTFBORWtlSG5UKzdpUzF0L1NuZG5pV3laUEd0Njc5bjZ0OWR3NHRvVk9BOExYUmxNM25adjN3ZzNmdVdIR0hOa2E1SGpUVmdCa0svbU84b0ZManpuNUNWL240T0RWWnBOMXhvc3l5TUFnQzJiVCtHRU5WMUx1dS8rL3RFMkw4M3hJYWdBSmpubnlaeGI5UDNTekJGSGxscTl5WEo4b2h5dDF1bFoxWUh6SHJ2QUJaeTg3V2kxZnBTWGJua0tNZ0NBeUM1K0I1ajMrZjBXT3JqK3YxbHJpS3pGTENLQXlkc2U2UWIwOFVxN1FTVm9Da0NDcGdBa2FBcEFncVlBSkdnS1FJS21BQ1JvQ2tDQ3BnQWthQXBBZ3FZQUpHZ0tRSUttQUNSb0NrQ0NwZ0FrYUFwQWdxWUFKR2dLUUlLbUFDUm9Da0NDcGdBa2FBcEFncVlBSkdnS1FJS21BQ1JvQ2tDQ3BnQWthQXBBZ3FZQUpHZ0tRSUttQUNSb3diNC93RkUzL2ZyOGM3eHZsL0UrZjlzYXpLenZNMk1BWTk3OGl2TmhYc1AvYUZJQTdXWU1PSWRQMDZuL04zRThJd0tEeDJHb1J6RUdzSGdLV1lhYkZvMDFudFJaeHBzSjFuaXM4VlRpbEV3UnRKVUNhQ2RqOE0wbXRsQ2cwTHNXbjJYNFpwTkcvd0MyV0FUdk1VRGRSbFN5akkyamcyVEdNaDVGdkY3cG9wS2xlUExCWDIwbXJDdzJPTytFQXpTY1piUlJZUHZCTmF3czF2R0tvRzBVUUxzWWcyK21KS3RXc2ZaRGwyR3NvVEV3UkhuRFNRdzg4amlqeis0Z0xoU29HOE03eDZ2OCtjNWZZNzNqalVvWDV3d2U0RHNiTi9HemRTZlJtVFVaU3d0c1dqUEF0MzluR3lYajJORy9oZytlL0FwZmZQQml2dm5NV2F3c05MUW1hQk50QkxlTkIyTlk5WUgzVWVqdHdkVWIrTFNKc1liVjd6K2Y0dG9lWEpwaU1Geno2Z3RzcUE1VGl4UHFVWVQxY00zdW5aeGNIV0hDeGtRNHZyTGxFVTdyUGNCd3ZVaTFtVkN4amk5dGVaUnpldzlRYlUyTDVNZ3BnSGJKUEZHbFJHSDFLdHpFQkZpYnJ4WFNGQk5IRkh0NlNEUEh5clRCK3RvWVkwbUJ5SHVzOXpTc3BlQXlObGFIcVpMUVc2NXhlazgvNlVTSjJEb2k2MmlrTWVVNFpYTnZIeE5acEFEYVJBRzBrL2Y0TEp1NUI2ajFiOTk2VzFhSElUVUdPMk9qT0pjYW0yOGdlMFB6a0VGdWpNY0RqU3hDazUvMlVRRHR0b0MzSjUzckZ0TS9iMlo1aGo5MHQ2Z2NPUVVnUVZNQUVqUUZJRUZUQUJJMEJTQkJVd0FTTkFVZ1FWTUFFalFGSUVGVEFCSTBCU0JCQy9iMUFHNk9seW5tWnpXYmVVL3BzY1lReDVZNG12YjhZVHcyT3ZyUEo1RTF4Rkhyc2MyYmorZGJMN2FaejJ3LzgrVG41dng5dk0wRkdZQXhCanZYQ0YvQXFaYmpqU2JqQjBjNTREMXBtcC9saWZORTVTSnJqdVpBTW9hUmFwM3FRSldzVWlQTlpnYVF1dmtmZTdhZmVmSno1V0xTM21VOVRnUVhnREdHUmpQbHBkZjdaL2tpWkpsblhVOFhYWlVpbnBrOVRBNldjMDlienovODVjZW9sQlBjNUtEejBEU1dlM3hDNHpBRGNTbXNNWXhQMUxucThyTTU5ZUlQVW83ck9CL051RTFQZDJYeXgzZ0w1enk3OXcyU09aK3YzVnFMNlBCWURLL3RIMnI3TWg4UGdnckFlVSt4RVBQYXZpRXV1UDZmM3ZMMU9MTDBEVmE1ODVicnVQYkRtOGt5TjJPYVkyMCt0TTU4OXpyT2ZQZTZXUi9qSjkvN0RmWFVMK1NzNkVXeDFqQmViM0xsUjg3aHloTzJ6SHRiTSszQnZmY1lZeGl0MWJuOEU3Y3pNRklqaVNQOExHc3EwKzZGUGc0RUZjQjBzLzJ4ODdtL0lZNmlXZTd4SnVjOUx2TlRUN1dUYTRxeGhwdnpFaWpUelhVTGY1amJHR09acU5hSk13YytCVFB6enhkRmRzNFpYQndackxWVFA2UGtnZzFnTHNZWWhzYkc1NzJOTlFZYlQzdVdKUThnaXFEcFBKR3hwRk5meklleXNmbWF4QUNSOXpNdWdlS01BUSt4OTFOWGhVaXNtL25DZDJNQlIyU3lmSzNrWjI0RUg4NUl0VTR6emViZTlnbVVkb05PNHoxRWtlSCtSNTREWnQ5b25JMGhuMk5YRXNON1QreGdmNjFKYlBOblkxTW80T29OSnZidEk0a3NRMG5DcnE1dVZqYnFlTUFCSFdtVFdweXdzMnNWWFRUWlcrdmtGM3RPSktuVWNONWdiUVNOWVV4aE5WSHYrMXNQdXJBL1hkYmFIbm5vNlpkNDQ4QXdoV1QyNlUrb3RBYVl3MklIU2I1bkNiNTR3VHJHbmVIbi96dUM5ZUJyTlE0KytDaU53V0dpUW9MMW51OXYrRzI2MGlhZHpRYVI5d3dVaW56NzVEUFlVKzZna3FXazF2RDVoeTZpdXp6QmlaVUpxdFVhVk5aVFB1dXIySTRONE4yaW52MDljMCs3UXFjQXBzbWNvNk5VNE9ublgyZC8veGpyZXJwdzNpOW9UZENheGJDMkVuUEg1ZS9rcHlkNGJ2aTc3ekgwNk9QNGlRbHNJY0Y3VCtJOVEwbVJyNTEySG12ck5UeUdXaFF6WENoU3pwcGtHRXBSeHQ1cUI5ZmMrM3VzWUIrZnVlNFN6RWMrU2hKMTVLdXBSUXgrYXd3R2VPQVhMeEJGWmlHYktFSFJGT2dRY1d6cEg2NnljL2NCWUhGcmdzbTlpODNNY2RsWjYvbXJxODVuLzk1K1RDRWhtcmJCbkhoSDdCMEhTaFg2aW1YRzQ1aEsybVR5VUpiemxzNlNwMjlna0o3MVovR25mM0ExTHVyQXVFT3VPSEVZbnZ6bTQvVW16NzIwbjBJU2EvcHpDQVZ3Q0dzTTlVYkczUTl1WDlMOURaQkVsdFI1UHZueGkvbnlaNi9FWlk2eDhRWkpIQkZaQTYyMVJlSWNpWGRURzhYVzVFZDV2WGNNREk5ejVTVm5jcyt0MTVFWWovRU9ZK2ZmTzNVbzUvSmRvTS9zM01QMkYvZFNLU1hCSHZHZGl3STRoSE9lam5MQ3o1N2F4VVM5U1dTWDlpdUtyU0Z6anIrNS9sTHUvdG9Ock8vdHBtOXdqSkZxblRSeldHdUlJanYxNGIxbm90SGs0RkNWTlBOODdvOHU1VDl2L1dONlZuWGhqY0VzWXRvenBUWFk3MzE0QnhNTjdRR2FqYllCRHVHOHAxUk0yTFg3SUUvdWVJMkxOcCtDYzI1SklVVFdrbWFPRDV5emtmLzV0ODl3NTMxUHNlM1I1OW4rNGo3NkJzZW9OMU9zTVhqdjZlbnVaT09KcS9uZ2U5L0RuM3pzZlp6NnJyWDVVV2F6OEwxUmIzbjgxa0c4QjU3WVNhVVV2M25VV3FZb2dGa1lZM0RPODYvM1BzbVd6YWNjMFM2VU9MSTQ1K21xRkxueDZndTU4ZW9MR1JvZDU1RmZ2Y3hvZFlJb2lraXpqQXZPMnNENjNtNEtTVDdOY2M1UEhYbGVpc3c1ckRIOCtQRVgyTEZySDUwZFJRVXdDOU43K2MzNnJjekNHSmlvcHp5NjlWT2NjY282c2lXdUJTWjVEODdsVTUvNWpzUk9UbytPYkxyaXlWeCs1dWlIYnJ5RHg1NTVoUlVkSmJMVzVSbmxUZG9HbUlNMStmVGw4Lzk4SC9WR2ZsejNTSjRwakdtZHF0Q2E4bVNaSTUzMjRiekgrM3lOY2FSejljeDVJbXZZZXM4VFBQS3Jselg0NTZFQTVwQTV4OHJPRXZjOXZJTjdIM3FXeUZxeXJEMkR5Smg4QXppZTltRVA4eHFFaFhMZWc0ZmgwUWx1K2RZRGxJcXg5dnpNUXdITUkzT2U3aFVWYnJydFJ4d2NydWJ6K1dVK21MejNSSkhscHR1M3NhOS9oSEl4MGI3L2VTaUFlWGp2S1JWaVh0NHp3T2UrL2w5a21TTnpidGtPcURUTHQxUHUrZS90YkwzbkNWWjBsa2pidE5aNnUxSUFoNUZtanA3dURyYmUrd1JmK01ZMmtpaGFsb01xYmIxMjRjbG5YK1BqWC9ndWxWS0JCYjI4TFhBS1lBR2FhY2E2MVYzYzhjUEh1UHZCN1NSeFJEUE5qdlZpVFprYy9BY0d4dmpVUC80SFNXeUpyRjIyYTZybFJBRXNrQWVTSk9JUGI3NXJLZ0xuL0RFZlpKT0QvK0JRbFN2LzRsOTQ1amQ3NkNnWHROZG5nUlRBQW5udmlTTkxNWW01NGUrL3o4MjMvMmhxbi82eG1CSTU3OGxjdmt6M1BieURTLy9zTnJidjJzZXFsUldheTNDS3RsenBTUEFpT09kYnV5L2hsbS8raEQxOUk5ejYyU3ZvN2lxMzZRRFc0WG1mNzZMTkw0c0NkMjE3bWs5OCtRZUFZV1ZuaVdicU5QTmZCQjBKWGdJRHhIRkUvM0NOOTV5MGhxOSsrbmY1NklXYmdIeHd6bnZabFNXYVBKSThlWDdQeTI4TWNOUHQyL2ozQjM3TnFoVmxyREZUci82U2hWTUFSeUNLTE9NVFRacHB5dlZYbk0rbnI5M0NxUnZXQXVRSHpWb25zaTMxUmVqZTUxTXYxNXArQVl4VUovak8vYi9rNjNjOXhLdDdCK25wN2lETG5GN3h0VVFLNEFoTkhzSHRINjdSM1ZYbXFzdk81cFBYWE1TbWswK1l1bzN6dm5WdVBvREp0eDFtK1Y3T2VUejVrVndQTXk3Sk1scXI4OTM3ZjhsdFAzaU01MTQ1UUZlbFNLa1FMOHRkc3NjVEJkQW1jWlNmT3pROE5zN0t6akxYZm5nelYydzVuZk0ybmNTcUZlVWxmYy9xUklOWDNoamd4NCsvd0ozM1A4V3pMKzZqbzF5a1Vrcklsc0VlcUxjREJkQm1jV1JwcG5rSXBVSk1UM2NuNTUyK25yTi82eDFjY3U0cEpISEUrV2U4YTlaVG5YZnU3bU52M3dpdkh4am1vYWRmNUlsbmQ3T25iNFRCa2RyVXdIZk9ML3ZUTVk0bkN1QW95SzhSbEw4T29KbG0xQ2FhT0orZm9SbEZsazBiZS9NTDZVNWVVS2oxMzlmM0RkRTNWTVhhZk5kcVI2bEFra1Fra2RVei9sR2kzYUJIZ1llcHVYa2NXN3E3eXEyQm5wL3kvUHlyZmEyWEs3Wkd2ekhRdW16ajZwV1ZxVTlsem9QM211Y2ZSUXJnS1BNZU1qOXpBRmZtdUJLeng3ZnRsR3RaR0FWd0RHZ092M3pvVkFnSm1nS1FvQ2tBQ1pvQ2tLQXBBQW1hQXBDZ0tRQUptZ0tRb0NrQUNab0NrS0FwQUFtYUFwQ2dLUUFKbWdLUW9Da0FDWm9Da0tBcEFBbWFBcENnS1FBSm1nS1FvQ2tBQ1pvQ2tLQXBBQW1hQXBDZ0tRQUptZ0tRb0NrQUNab0NrS0FwQUFtYUFwQ2dLUUFKbWdLUW9Da0FDWm9Da0tBcEFBbWFBcENnS1FBSm1nS1FvQ2tBQ1pvQ2tLQXBBQW1hQXBDZ0tRQUptZ0tRb0NrQUNab0NrS0FwQUFtYUFwQ2dLUUFKMnY4QmVFWTA2Tko3eHRVQUFBQUFTVVZPUks1Q1lJST0iLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogImFueSJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQVlBQUFEMGVOVDZBQUFMR2tsRVFWUjRuTzNkUDI0VVp4eUFZUlBScG9VbUpVVnFjZ0FhT0VPVUlwR1FPQUVIQUhFQlRvQ0VGQW9PUWNVQlFwMkNLcUxoRktSSURBdkczcDNaOGM2Zjkza3FXOHhZdzN3ci9kNzUxdGJldUhYL3lhY3pBQ0RsaDdrdkFBQTRQUUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBaTZPZmNGd0xjK3ZuazI5eVVjNVBhRHAzTmZBanU4Ym1BWU93QUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkEwTTI1THdENDJrKy8vL2I1NncrdlhsLzQvbGpQMzczOS9QWGp1L2N1Zkgrczk0OWVmdjc2em91SEY3NEhsa0VBd0VMc0R2cDl4NHdKZ2QxQnYrK1lNU0d3TytqM0hTTUVZSDdlQW9BRk9HVDRIM1A4SWNQL21PTVBHZjdISEE5TVR3REF6SVlPODZIbkRSM21RODhiTzh4RkFNeExBQUJBa0FDQUdZMTkrai8wL0xGUC80ZWVmK3hUdkYwQW1JOEFBSUFnQVFBQVFRSUFBSUlFQUFBRUNRQUFDQklBQUJBa0FBQWdTQUFBUUpBQUFJQWdBUUFBUVFJQUFJSUVBQUFFQ1FBQUNCSUFBQkFrQUFBZ1NBQUFRSkFBQUlBZ0FRQUFRUUlBQUlJRUFBQUVDUUFBQ0JJQUFCQWtBQUFnU0FBQVFKQUFBSUFnQVFBQVFRSUFBSUlFQUFBRUNRQUFDQklBQUJBa0FBQWdTQUFBUUpBQUFJQWdBUUFBUVFJQUFJSUVBQUFFQ1FBQUNCSUFBQkFrQUFBZ1NBQUFRSkFBQUlBZ0FRQUFRUUlBQUlJRUFBQUUzWno3QW1DdFByNTVkdlRQK09YUHZ5ZTRrbldiNGo0Q3d3a0FGdWYyZzZlVC9qd0RockdtZmkzQ2tuZ0xBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUhBNXZsYmJzYnd1bUhyQkFETTZLOC9majdxL0ErdlhsLzU3NC92M2p2cTUrODcvODZMaDBmOS9COS8vZWVvODRIeEJBQUFCQWtBbU5uWVhZQjlULy9ueHU0Q0hIcmUyRjBBVC84d0x3RUFDekEwQWc0ZC91ZUdSc0RRNDRkR2dPRVA4L05oUUxBUTV4RncxU2NFRGgzOHU4Nkgrdk4zYi9jZU04WjVCTHgvOVBMU1l3eCtXSTRidCs0LytUVDNSY0Fwck8xVEFiZjBXK2p1UFN5UHR3QmdvZFkyTkMremxmOEhiSTBBZ0FWYisvQmMrL1hEbGdrQUFBZ1NBR1NzOVgzZHRUNUZyL1c2MS9vNmdhRUVBS3pBMm9icDJxNFhpZ1FBck1SYWh1cGFyaFBxL0JrZ09Wc1lVRXZjcG5aZllWM3NBTUFLTFczWUx1MTZnUDBFQUt6VVVvYnVVcTRER01aYkFDUnRiV2pOc1hYdEhzSzYrU3dBMklEellYeUtJYmExd1E5VkFnQTJaSGM0VHhrRGhqNXNqN2NBeUtvTnRTRkI0TjdBOXRrQmdJamFVQWV1NXE4QXlQTFV4OW1aMXdGZEFnQUFnZ1FBYVo3KzJxdy9aUUlBQUlJRUFIbWVBcHVzTzNVQ0FNNE1neHJyRFFJQUFKSUVBUHpQVTJHRGRZYi9DQUFBQ0JJQXNNUFQ0YlpaWC9oQ0FNQTNESWx0c3E3d05RRUFBRUVDQUw3RDArSzJXRSs0U0FEQUpReU5iYkNPOEgwQ0FLNWdlS3liOVlQTENRRFl3eEJaSitzR1Z4TUFBQkFrQU9BQW5pYlh4WHJCZmdJQURtU29ySU4xZ3NNSUFCakFjRmsyNndPSEV3QXdrQ0d6VE5ZRmhoRUFNSUpoc3l6V0E0WVRBRENTb2JNTTFnSEd1WEhyL3BOUGMxOEVyTjNITjgvbXZvUWNneCtPWXdjQUptQVluWmI3RGNjVEFEQVJRK2swM0dlWWhnQ0FDUmxPMTh2OWhlbjRIUUM0Sm40dllEb0dQMHpQRGdCY0UwTnJHdTRqWEE4N0FIQUNkZ09HTS9qaGV0a0JnQk13eklaeHYrRDYyUUdBRTdNYmNEbURIMDVIQU1CTWhNQVhCaitjbmdDQW1aVkR3T0NIK1FnQVdJaFNDQmo4TUQ4QkFBdXo1UkF3K0dFNUJBQXMxSlpDd09DSDVSRUFzQUpyakFGREg1Wk5BTUFLTFRFSURIeFlGd0VBR3pCSEVCajRzRzRDQURac2lqQXc2R0diQkFBQUJQa3NBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkEwTC9yYWlwZTA0Z2x5d0FBQUFCSlJVNUVya0pnZ2c9PSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIn1dfQ==">
+<meta name="theme-color" content="#16447E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="MiPoli">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+
+<!--
+  ┌──────────────────────────────────────────────────────────────┐
+  │  PORTAL DE COORDINADORES · Mesas Deportivas Barriales          │
+  │  Secretaría de Fortalecimiento Vecinal y Deportes · Córdoba    │
+  │                                                                │
+  │  CÓMO EDITARLO: todo lo que tenés que tocar está en el bloque  │
+  │  CONFIG, abajo de todo (antes de </body>). Ahí cargás:         │
+  │   · el link de la carpeta de Drive de cada poli                │
+  │   · los links de los formularios, capacitaciones y documentos  │
+  │   · la fecha de la firma                                       │
+  │                                                                │
+  │  LOGO: para usar el logo real, subí "logo.png" a este mismo    │
+  │  repo y descomentá la línea <img> en el encabezado.            │
+  │                                                                │
+  │  PUBLICAR: subí este archivo como "index.html" a un repo de    │
+  │  GitHub → Settings → Pages → Branch: main → Save. En un        │
+  │  minuto tenés la URL para mandar por WhatsApp.                 │
+  └──────────────────────────────────────────────────────────────┘
+-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap');
+
+  :root{
+    --azul:#16447E;
+    --bordo:#A4123F;
+    --amber:#F2A81D;
+    --celeste:#32A1D7;
+    --ink:#243246;
+    --mut:#6B7280;
+    --ln:#E7E9EE;
+    --bg:#ECEEF1;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  body{
+    font-family:'Maven Pro',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+  }
+
+  .app{max-width:480px;margin:0 auto;background:#fff;min-height:100vh}
+
+  /* ---------- Encabezado ---------- */
+  .hd{position:relative;overflow:hidden;background:var(--azul);padding:18px 18px;display:flex;align-items:center;gap:12px}
+  .hd .acc1{position:absolute;top:-26px;right:-30px;width:110px;height:34px;background:var(--amber);border-radius:24px;transform:rotate(40deg)}
+  .hd .acc2{position:absolute;top:16px;right:-34px;width:84px;height:26px;background:var(--bordo);border-radius:24px;transform:rotate(40deg);opacity:.9}
+  .hd .mark{position:relative;flex-shrink:0}
+  .hd .wm{position:relative}
+  .hd .wm .t1{font-size:17px;font-weight:700;color:#fff;line-height:1.15}
+  .hd .wm .t2{font-size:12px;font-weight:400;color:rgba(255,255,255,.82);margin-top:1px}
+
+  /* ---------- Estructura ---------- */
+  .wrap{padding:18px 16px 8px;display:flex;flex-direction:column;gap:22px}
+  .bt{display:flex;align-items:center;gap:9px;margin-bottom:11px}
+  .bt h2{font-size:16px;font-weight:700;color:var(--azul)}
+  .bt .bar{height:3px;width:24px;border-radius:2px}
+
+  /* ---------- Novedades ---------- */
+  .nov{display:flex;flex-direction:column;gap:10px}
+  .ncard{padding:11px 13px;border-radius:0 8px 8px 0}
+  .ncard .nh{display:flex;align-items:center;gap:7px;margin-bottom:3px;font-size:12px;font-weight:600}
+  .ncard p{font-size:13.5px;color:var(--ink)}
+  .nfirma{background:rgba(50,161,215,.09);border-left:3px solid var(--celeste)}
+  .nfirma .nh{color:var(--azul)}
+  .ninfo{background:rgba(242,168,29,.13);border-left:3px solid var(--amber)}
+  .ninfo .nh{color:#8A5E00}
+  .ncard a{color:inherit;font-weight:600;text-decoration:underline}
+
+  /* ---------- Tu poli (elemento principal) ---------- */
+  .poli{border:1.5px solid var(--celeste);border-radius:14px;padding:16px 15px;background:#fff}
+  .poli .lead{font-size:13.5px;color:var(--mut);margin-bottom:12px}
+  label.lbl{display:block;font-size:12px;font-weight:600;color:var(--azul);margin-bottom:6px}
+  select{
+    width:100%;font-family:inherit;font-size:16px;color:var(--ink);
+    padding:13px 12px;border:1.5px solid var(--ln);border-radius:10px;
+    background:#fff;appearance:none;-webkit-appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%2316447E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat:no-repeat;background-position:right 12px center;
+  }
+  select:focus-visible{outline:none;border-color:var(--celeste);box-shadow:0 0 0 3px rgba(50,161,215,.25)}
+  .go{
+    width:100%;margin-top:11px;font-family:inherit;font-size:15px;font-weight:600;
+    color:#fff;background:var(--azul);border:none;border-radius:10px;
+    padding:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;
+    transition:opacity .15s,background .15s;
+  }
+  .go:disabled{background:#A9B4C2;cursor:not-allowed}
+  .go:not(:disabled):active{background:#10355f}
+  .go:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+  .hint{margin-top:10px;font-size:12.5px;color:var(--mut);min-height:1px}
+  .hint.warn{color:var(--bordo);font-weight:500}
+
+  /* ---------- Botones de acceso ---------- */
+  .links{display:flex;flex-direction:column;gap:10px}
+  .lnk{
+    display:flex;align-items:center;gap:12px;padding:13px;border:1px solid var(--ln);
+    border-radius:12px;background:#fff;text-decoration:none;color:inherit;cursor:pointer;
+    transition:background .15s,border-color .15s;
+  }
+  .lnk:active{background:#F5F8FC}
+  .lnk:focus-visible{outline:3px solid var(--celeste);outline-offset:2px}
+  .lnk .ic{width:38px;height:38px;border-radius:10px;background:rgba(50,161,215,.13);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .lnk .tx{flex:1}
+  .lnk .tx b{display:block;font-size:14px;font-weight:600;color:var(--ink)}
+  .lnk .tx span{font-size:12px;color:var(--mut)}
+  .lnk .chev{flex-shrink:0;opacity:.55}
+
+  /* ---------- Link + botón compartir ---------- */
+  .lnkwrap{border:1px solid var(--ln);border-radius:12px;overflow:hidden}
+  .lnkwrap .lnk{border:none;border-radius:0}
+  .sharebtn{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;font-family:inherit;font-size:13px;font-weight:600;color:var(--azul);background:rgba(50,161,215,.10);border:none;border-top:1px solid var(--ln);padding:11px;cursor:pointer;transition:background .15s,color .15s}
+  .sharebtn:active{background:rgba(50,161,215,.20)}
+  .sharebtn:focus-visible{outline:3px solid var(--celeste);outline-offset:-3px}
+  .sharebtn.ok{color:#0a7a3d;background:rgba(16,160,80,.13)}
+
+  /* ---------- Pie ---------- */
+  .urlbar{display:flex;align-items:center;gap:8px;background:#F4F6F9;border-radius:10px;padding:11px 13px;margin:14px 16px}
+  .urlbar span{font-size:12px;color:var(--mut)}
+  .tricolor{display:flex;height:6px}
+  .tricolor i{flex:1}
+  .foot{text-align:center;font-size:11.5px;color:var(--mut);padding:14px 16px 22px}
+
+  svg.i{display:block}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+  /* ---------- Agregar a la pantalla ---------- */
+  .install{display:flex;align-items:center;justify-content:center;gap:9px;width:calc(100% - 32px);margin:18px 16px 20px;font-family:inherit;font-size:14px;font-weight:600;color:var(--azul);background:#fff;border:1.5px solid var(--celeste);border-radius:12px;padding:13px;cursor:pointer}
+  .install:active{background:#F5F8FC}
+  .install:focus-visible{outline:3px solid var(--celeste);outline-offset:2px}
+  .howto{margin:0 16px 20px;background:#F4F6F9;border-radius:10px;padding:12px 14px;font-size:13px;color:var(--ink);line-height:1.55}
+  .howto[hidden]{display:none}
+  .howto b{color:var(--azul)}
+  .howto .lead{font-weight:600;color:var(--azul);margin-bottom:4px}
+</style>
+</head>
+<body>
+<div class="app">
+
+ <!-- ENCABEZADO -->
+  <header class="hd">
+    <span class="acc1"></span><span class="acc2"></span>
+
+    <img class="mark" src="logo.png" alt="Secretaría de Fortalecimiento Vecinal y Deportes" width="38" height="38">
+
+    <div class="wm">
+      <div class="t1">Mesas Territoriales por el Deporte, la Recreación y el Bienestar</div>
+      <div class="t2">Secretaría de Fortalecimiento Vecinal y Deportes</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- NOVEDADES -->
+    <section>
+      <div class="bt"><h2>Novedades</h2><span class="bar" style="background:var(--bordo)"></span></div>
+      <div class="nov">
+        <div class="ncard nfirma">
+          <div class="nh">
+            <svg class="i" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+            <span>Firma de acuerdos</span>
+          </div>
+          <p id="nov-firma">Próxima firma de acuerdos en la Secretaría. Traé la documentación de tu institución.</p>
+        </div>
+        <div class="ncard ninfo">
+          <div class="nh">
+            <svg class="i" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+            <span id="nov-informe-titulo">Informe de resultados 2025</span>
+          </div>
+          <p><span id="nov-informe-text">70 mesas · 347 instituciones · 116 acuerdos.</span> <a id="nov-informe" href="#" target="_blank" rel="noopener">Leer el informe</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TU POLI (elemento principal) -->
+    <section>
+      <div class="bt"><h2>Tu poli</h2><span class="bar" style="background:var(--celeste)"></span></div>
+      <div class="poli">
+        <p class="lead">Elegí tu polideportivo y entrá a la carpeta con tus acuerdos de uso firmados.</p>
+        <label class="lbl" for="poli-select">Polideportivo</label>
+        <select id="poli-select" aria-describedby="poli-hint">
+          <option value="" selected>Elegí tu poli…</option>
+        </select>
+        <button class="go" id="poli-go" type="button" disabled>
+          <svg class="i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span id="poli-go-label">Abrir mis acuerdos</span>
+        </button>
+        <p class="hint" id="poli-hint"></p>
+      </div>
+    </section>
+
+    <!-- AGENDA TERRITORIAL -->
+    <section>
+      <div class="bt"><h2>Agenda territorial</h2><span class="bar" style="background:var(--bordo)"></span></div>
+      <div class="poli">
+        <p class="lead">Tu agenda, con las efemérides y fechas clave ya cargadas como sugerencia. Entrá y planificá tus eventos: la agenda es tuya para coordinar.</p>
+        <a class="go" id="lnk-agenda" href="#" target="_blank" rel="noopener" style="text-decoration:none">
+          <svg class="i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Mi agenda</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- MÁS ACCESOS -->
+    <section>
+      <div class="bt"><h2>Más accesos</h2><span class="bar" style="background:var(--amber)"></span></div>
+      <div class="links">
+        <div class="lnkwrap">
+          <a class="lnk" id="lnk-solicitud" href="#" target="_blank" rel="noopener">
+            <span class="ic"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16447E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></span>
+            <span class="tx"><b>Solicitar un acuerdo</b><span>Formulario para una nueva actividad</span></span>
+            <svg class="chev i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9aa3b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <button class="sharebtn" type="button" data-share="solicitud">
+            <svg class="i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+            <span>Compartir link</span>
+          </button>
+        </div>
+        <div class="lnkwrap">
+          <a class="lnk" id="lnk-inscripcion" href="#" target="_blank" rel="noopener">
+            <span class="ic"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16447E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></span>
+            <span class="tx"><b>Inscripción a las mesas</b><span>Para que las instituciones se sumen</span></span>
+            <svg class="chev i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9aa3b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <button class="sharebtn" type="button" data-share="inscripcion">
+            <svg class="i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+            <span>Compartir link</span>
+          </button>
+        </div>
+        <a class="lnk" id="lnk-acta" href="#" target="_blank" rel="noopener">
+          <span class="ic"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16447E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          <span class="tx"><b>Cargar un acta de reunión</b><span>Subí el acta de tu mesa</span></span>
+          <svg class="chev i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9aa3b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+        <a class="lnk" id="lnk-capas" href="#" target="_blank" rel="noopener">
+          <span class="ic"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16447E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg></span>
+          <span class="tx"><b>Capacitaciones</b><span>Materiales y grabaciones</span></span>
+          <svg class="chev i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9aa3b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+        <a class="lnk" id="lnk-docs" href="#" target="_blank" rel="noopener">
+          <span class="ic"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16447E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>
+          <span class="tx"><b>Documentos</b><span>Mesas territoriales y materiales de apoyo</span></span>
+          <svg class="chev i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9aa3b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <button class="install" id="installBtn" type="button">
+    <svg class="i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16447E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="8 11 12 15 16 11"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+    Agregar a mi pantalla
+  </button>
+  <div class="howto" id="howto" hidden>
+    <div class="lead">Para tenerlo a un toque:</div>
+    <div id="howtoText"></div>
+  </div>
+
+  <div class="tricolor"><i style="background:var(--azul)"></i><i style="background:var(--bordo)"></i><i style="background:var(--amber)"></i><i style="background:var(--celeste)"></i></div>
+  <p class="foot">Dirección de Vinculación · Secretaría de Fortalecimiento Vecinal y Deportes · Municipalidad de Córdoba</p>
+
+</div>
+
+<script>
+/* ════════════════════════════════════════════════════════════════
+   CONFIG — ESTO ES LO ÚNICO QUE TENÉS QUE EDITAR
+   ════════════════════════════════════════════════════════════════ */
+
+/* 1) NOVEDADES — el texto de los dos avisos de arriba.
+      Editá libremente lo que dice cada uno. */
+const FIRMA = "Próxima firma de acuerdos: jueves 26/6, 10 hs en la Secretaría. Traé la documentación de tu institución. (Acá irían las novedades, comunicaciones, etc.)";
+
+const INFORME_TITULO = "Informe de resultados 2025";
+const INFORME_TEXTO  = "70 mesas · 347 instituciones · 116 acuerdos.";
+
+/* 2) Links de los formularios, capacitaciones, documentos e informe.
+      Pegá entre comillas el link de cada uno. Si lo dejás vacío "", el
+      botón avisa que todavía no está cargado. */
+const LINKS = {
+  informe:    "https://drive.google.com/file/d/1aow1IFroP-uhj3WZwOJx97_I5ejhiLTF/view?usp=sharing",   // PDF del informe de resultados 2025
+  solicitud:  "https://forms.gle/ZTC4SXqvpg4RWhPX6",   // Google Form: solicitar un acuerdo de uso
+  inscripcion:"https://forms.gle/NMfdpjdwBRU3CF348",   // Google Form: inscripción de instituciones a las mesas
+  acta:       "",   // Google Form: cargar un acta de reunión
+  capas:      "",   // Carpeta de Drive: capacitaciones
+  docs:       "https://drive.google.com/drive/folders/18pvzkbo2RymahJf-xxoGUS10y2C2hy2d",    // Carpeta de Drive: documentos / mesas territoriales
+  agenda:     "https://calendar.google.com/calendar/r"    // Google Calendar (cada coordinador ve su propia agenda compartida)
+};
+
+/* 3) Los polis del piloto. Pegá el link de la carpeta de Drive de cada uno
+      entre las comillas de "url". Los que queden con "" todavía sin link,
+      el portal los marca como "pendiente" y avisa al coordinador. */
+const POLIS = [
+  { n:"12 de Julio",            url:"" },
+  { n:"23 de Abril",            url:"" },
+  { n:"Ampliación Ferreyra",    url:"" },
+  { n:"Benjamín Cabral",        url:"https://drive.google.com/drive/folders/16Q3wkikU0UK6WY3LUdUeJ_URFJ5z_Rs0" },
+  { n:"Cáceres",                url:"" },
+  { n:"Campo de la Ribera",     url:"" },
+  { n:"Colonia Lola",           url:"" },
+  { n:"Cooperativa La Unidad",  url:"" },
+  { n:"Deán Funes",             url:"" },
+  { n:"El Chingolo",            url:"" },
+  { n:"Guiñazú",                url:"" },
+  { n:"Héroes de Malvinas",     url:"" },
+  { n:"IPV Argüello",           url:"" },
+  { n:"Juan Pablo II",          url:"" },
+  { n:"La Tela",                url:"" },
+  { n:"Los Gigantes",           url:"" },
+  { n:"Marcos Sastre",          url:"" },
+  { n:"Mirizzi",                url:"" },
+  { n:"Nuevo Progreso",         url:"" },
+  { n:"Obispo Angelelli",       url:"" },
+  { n:"Oña",                    url:"" },
+  { n:"Panamericano",           url:"" },
+  { n:"Parque República",       url:"" },
+  { n:"Policial Anexo",         url:"" },
+  { n:"Primero de Mayo",        url:"" },
+  { n:"Villa Aspacia",          url:"" },
+  { n:"Villa El Libertador",    url:"" },
+  { n:"Villa Retiro",           url:"" },
+  { n:"Zepa B",                 url:"" }
+];
+
+/* ════════════════════════════════════════════════════════════════
+   De acá para abajo no hace falta tocar nada.
+   ════════════════════════════════════════════════════════════════ */
+
+document.getElementById("nov-firma").textContent = FIRMA;
+document.getElementById("nov-informe-titulo").textContent = INFORME_TITULO;
+document.getElementById("nov-informe-text").textContent = INFORME_TEXTO;
+
+// Novedad informe + botones de acceso
+function setLink(id, url){
+  const el = document.getElementById(id);
+  if(url){ el.href = url; }
+  else{
+    el.addEventListener("click", function(e){
+      e.preventDefault();
+      alert("Este enlace todavía no está cargado. Avisá a la Dirección de Vinculación.");
+    });
+  }
+}
+setLink("nov-informe", LINKS.informe);
+setLink("lnk-solicitud", LINKS.solicitud);
+setLink("lnk-inscripcion", LINKS.inscripcion);
+setLink("lnk-acta", LINKS.acta);
+setLink("lnk-capas", LINKS.capas);
+setLink("lnk-docs", LINKS.docs);
+setLink("lnk-agenda", LINKS.agenda);
+
+// Armar el desplegable de polis
+const sel = document.getElementById("poli-select");
+POLIS.forEach(function(p, i){
+  const o = document.createElement("option");
+  o.value = String(i);
+  o.textContent = p.url ? p.n : p.n + " (pendiente)";
+  sel.appendChild(o);
+});
+
+const goBtn = document.getElementById("poli-go");
+const goLbl = document.getElementById("poli-go-label");
+const hint  = document.getElementById("poli-hint");
+
+sel.addEventListener("change", function(){
+  hint.textContent = ""; hint.classList.remove("warn");
+  if(sel.value === ""){
+    goBtn.disabled = true; goLbl.textContent = "Abrir mis acuerdos"; return;
+  }
+  const p = POLIS[Number(sel.value)];
+  if(p.url){
+    goBtn.disabled = false;
+    goLbl.textContent = "Abrir acuerdos de " + p.n;
+  } else {
+    goBtn.disabled = true;
+    goLbl.textContent = "Abrir mis acuerdos";
+    hint.textContent = "La carpeta de " + p.n + " todavía no está disponible. Avisá a la Dirección de Vinculación.";
+    hint.classList.add("warn");
+  }
+});
+
+goBtn.addEventListener("click", function(){
+  if(sel.value === "") return;
+  const p = POLIS[Number(sel.value)];
+  if(p.url) window.open(p.url, "_blank", "noopener");
+});
+
+/* ---------- Compartir / copiar links ---------- */
+(function(){
+  function feedbackCopiado(btn){
+    var s=btn.querySelector("span"), prev=s.textContent;
+    s.textContent="¡Copiado!"; btn.classList.add("ok");
+    setTimeout(function(){ s.textContent=prev; btn.classList.remove("ok"); }, 1800);
+  }
+  function copiar(texto, btn){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(texto).then(function(){feedbackCopiado(btn);}).catch(function(){manual(texto,btn);});
+    } else { manual(texto,btn); }
+  }
+  function manual(texto, btn){
+    var ta=document.createElement("textarea");
+    ta.value=texto; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    try{ document.execCommand("copy"); feedbackCopiado(btn); }
+    catch(e){ window.prompt("Copiá el link:", texto); }
+    document.body.removeChild(ta);
+  }
+  var titulos={ solicitud:"Solicitar un acuerdo de uso", inscripcion:"Inscripción a las Mesas Territoriales" };
+  document.querySelectorAll(".sharebtn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var key=btn.getAttribute("data-share");
+      var url=LINKS[key];
+      if(!url){ alert("Este enlace todavía no está cargado. Avisá a la Dirección de Vinculación."); return; }
+      var titulo=titulos[key]||"";
+      if(navigator.share){
+        navigator.share({ title:titulo, text:titulo, url:url }).catch(function(){});
+      } else {
+        copiar(url, btn);
+      }
+    });
+  });
+})();
+
+/* ---------- Agregar a la pantalla de inicio ---------- */
+(function(){
+  var deferred=null;
+  var btn=document.getElementById("installBtn");
+  var howto=document.getElementById("howto");
+  var howtoText=document.getElementById("howtoText");
+  var standalone=(window.matchMedia&&window.matchMedia("(display-mode: standalone)").matches)||window.navigator.standalone===true;
+  if(standalone){ btn.style.display="none"; return; }
+  window.addEventListener("beforeinstallprompt",function(e){ e.preventDefault(); deferred=e; });
+  function pasos(){
+    var ua=navigator.userAgent||"";
+    if(/iphone|ipad|ipod/i.test(ua)){
+      return "En tu iPhone, desde <b>Safari</b>: toc\u00e1 el bot\u00f3n <b>Compartir</b> (el cuadradito con la flecha hacia arriba) y eleg\u00ed <b>Agregar a inicio</b>.";
+    }
+    return "Toc\u00e1 el men\u00fa <b>\u22ee</b> (arriba a la derecha del navegador) y eleg\u00ed <b>Agregar a la pantalla de inicio</b> o <b>Instalar app</b>.";
+  }
+  btn.addEventListener("click", function(){
+    if(deferred){ deferred.prompt(); deferred=null; return; }
+    howtoText.innerHTML=pasos();
+    howto.hidden=false;
+  });
+  window.addEventListener("appinstalled",function(){ btn.style.display="none"; howto.hidden=true; });
+})();
+</script>
+</body>
+</html>
