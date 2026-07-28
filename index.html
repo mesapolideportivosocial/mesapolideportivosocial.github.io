@@ -251,6 +251,17 @@
             <span>Compartir link</span>
           </button>
         </div>
+        <div class="lnkwrap">
+          <a class="lnk" id="lnk-formadores" href="#" target="_blank" rel="noopener">
+            <span class="ic"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16447E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M9 12.5L7.5 21l4.5-2.6L16.5 21 15 12.5"/></svg></span>
+            <span class="tx"><b>Inscripción a Formadores Deportivos</b><span>Capacitación para referentes y coordinadores</span></span>
+            <svg class="chev i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9aa3b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <button class="sharebtn" type="button" data-share="formadores">
+            <svg class="i" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+            <span>Compartir link</span>
+          </button>
+        </div>
         <a class="lnk" id="lnk-acta" href="#" target="_blank" rel="noopener">
           <span class="ic"><svg class="i" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16447E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
           <span class="tx"><b>Cargar un acta de reunión</b><span>Subí el acta de tu mesa</span></span>
@@ -308,7 +319,9 @@ const LINKS = {
   capas:      "",   // Carpeta de Drive: capacitaciones
   docs:       "https://drive.google.com/drive/folders/18pvzkbo2RymahJf-xxoGUS10y2C2hy2d",    // Carpeta de Drive: documentos / mesas territoriales
   agenda:     "https://calendar.google.com/calendar/r",   // Google Calendar (cada coordinador ve su propia agenda compartida)
-  cargarEvento: "https://docs.google.com/forms/d/e/1FAIpQLSdNVnT3fJSNfGdRPMXtyontLdr4YPRHZdyMUMV6rne9Do3TXQ/viewform"   // Google Form: cargar un evento en la agenda
+  cargarEvento: "https://docs.google.com/forms/d/e/1FAIpQLSdNVnT3fJSNfGdRPMXtyontLdr4YPRHZdyMUMV6rne9Do3TXQ/viewform",   // Google Form: cargar un evento en la agenda
+  formadores: "https://forms.gle/X7aHhyUDZmLeVsAF6"   // Google Form: inscripción a Formadores Deportivos y Recreativos (pegá el link cuando lo tengas)
+
 };
 
 /* 3-bis) PRELLENADO DEL FORMULARIO DE EVENTOS (opcional, se activa en el PASO 2).
@@ -424,6 +437,7 @@ setLink("lnk-acta", LINKS.acta);
 setLink("lnk-capas", LINKS.capas);
 setLink("lnk-docs", LINKS.docs);
 setLink("lnk-agenda", LINKS.agenda);
+setLink("lnk-formadores", LINKS.formadores);
 
 /* ---------- Cargar un evento (Form, con el poli ya precargado) ---------- */
 (function(){
@@ -510,7 +524,7 @@ goBtn.addEventListener("click", function(){
     catch(e){ window.prompt("Copiá el link:", texto); }
     document.body.removeChild(ta);
   }
-  var titulos={ solicitud:"Solicitar un acuerdo de uso", inscripcion:"Inscripción a las Mesas Territoriales" };
+  var titulos={ solicitud:"Solicitar un acuerdo de uso", inscripcion:"Inscripción a las Mesas Territoriales", formadores:"Inscripción a Formadores Deportivos y Recreativos" };
   document.querySelectorAll(".sharebtn").forEach(function(btn){
     btn.addEventListener("click", function(){
       var key=btn.getAttribute("data-share");
